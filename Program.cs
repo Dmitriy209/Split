@@ -7,11 +7,14 @@ namespace Split
         static void Main(string[] args)
         {
             string text = "String.Split метод возвращает строковый массив, содержащий подстроки данного экземпляра, разделенные элементами заданной строки или массива знаков Юникода.";
-            string[] arrayText = text.Split(' ');
 
-            for (int i = 0; i < arrayText.Length; i++)
+            char separator = ' ';
+
+            string[] words = text.Split(separator);
+
+            foreach (string word in words)
             {
-                Console.WriteLine(arrayText[i]);
+                Console.WriteLine(word);
             }
         }
     }
